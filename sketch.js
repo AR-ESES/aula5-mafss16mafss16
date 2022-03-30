@@ -1,17 +1,34 @@
 let laranjas;
-
-function setup() {
+	
+	function setup() {
 	createCanvas(windowWidth, windowHeight);
 	background(0)
-
-}
-
-function draw() {
-
+	
+	}
+	
+	function draw() {
+	
+	background(0)
+	if(mouseY>=height/2 && mouseX<=width/2) {
+	
+	fill (131,111,255);
+	} 
+	else if (mouseY<height/2 && mouseX<=width/2) {
+	
+	fill (255,0,0); 
+	}
+	else if(mouseY<height/2 && mouseX>width/2) { 
+	
+	fill (0,255,0); 
+	} 
+	else{
+	noFill();
+	}
+	
 	stroke(230);
 	strokeWeight(2);
-	noFill();
-	circle(width / 2, height / 2, height / 4);
+	circle(width / 2, height / 2, height / 6);
+	
+	
+	}
 
-
-}
